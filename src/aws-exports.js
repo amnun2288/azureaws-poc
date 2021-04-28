@@ -10,7 +10,8 @@ const awsmobile = {
         "scope": [
             "email",
             "openid",
-            "phone"
+            "phone",
+            "aws.cognito.signin.user.admin"
         ],
         "redirectSignIn": "http://localhost:3000/",
         "redirectSignOut": "http://localhost:3000/",
