@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - which openssl
+      - yum repolist all
+      - openssl version
+      - touch ~/.rnd
+      - openssl req -newkey rsa:4096 -nodes -sha256 -keyout stg.key -subj "/C=Uk/ST=LONDON/CN=localhost" -x509 -days 365 -out stg.crt
+      - pwd
